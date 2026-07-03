@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dub Console — Deep Mountain Sound</title>
+<meta name="description" content="A dub-inspired performance mixer for Ableton Live, driven live over OSC." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26L11 9l6 10 3-5 10 12z' fill='%23cf7a4d'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
+      </svg>
+      <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
+    </a>
+    <a class="back-link" href="index.html">← All projects</a>
+  </div>
+</header>
+
+<section class="hero project-hero" style="--accent: var(--rust); padding-bottom:170px;">
+  <div class="wrap">
+    <div class="glyph-lg" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <circle cx="7" cy="8" r="2.4"/><circle cx="17" cy="16" r="2.4"/><path d="M7 10.4V20M7 4v1.6M17 4v3.6M17 18.4V20"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Desktop · Performance mixer</p>
+    <h1>Dub Console</h1>
+    <p class="lede">A dub-inspired performance surface for Ableton Live, driven live over OSC. The tactile dub board Live never shipped with — echo throws, spring reverb, and feedback you can ride by hand.</p>
+    <div class="meta-row">
+      <span class="pill"><span class="status-dot dot-build"></span>In development</span>
+      <span class="pill">Electron</span>
+      <span class="pill">OSC / UDP</span>
+      <span class="pill">AbletonOSC</span>
+    </div>
+  </div>
+  <svg class="ridge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 250 L240 150 L440 220 L640 120 L820 210 L1040 110 L1240 200 L1440 140 L1440 320 L0 320 Z" fill="#232327" opacity="0.9"/>
+    <path d="M0 285 L200 210 L400 270 L620 190 L860 265 L1080 195 L1300 260 L1440 220 L1440 320 L0 320 Z" fill="#1c1c1f"/>
+    <path d="M0 315 L300 265 L560 300 L820 260 L1120 300 L1440 270 L1440 320 L0 320 Z" fill="#161618"/>
+  </svg>
+</section>
+
+<div class="content" style="--accent: var(--rust);">
+  <div class="wrap">
+    <article class="prose">
+      <h2>What it is</h2>
+      <p>Dub was born on the mixing desk — engineers playing the board itself, throwing sounds into echo, drowning them in spring reverb, killing the feedback before it swallows the room. Dub Console brings that instrument to Ableton Live: a standalone performance surface that talks to Live over the network and lets you play the mix in real time, with your hands, the way a dub engineer would.</p>
+
+      <h2>What it does</h2>
+      <div class="feature-grid">
+        <div class="feature"><h4>Live strips</h4><p>Volume, pan, mute, and solo per track, plus dedicated echo and spring sends — the signature dub throws, one gesture each.</p></div>
+        <div class="feature"><h4>Throws</h4><p>Momentary throws to echo, spring, or both: press to send a phrase spinning into the tail, release to pull it back.</p></div>
+        <div class="feature"><h4>Feedback kill</h4><p>A one-touch tamer for runaway feedback — the move that keeps a dub set on the edge without going over.</p></div>
+        <div class="feature"><h4>Device macros</h4><p>A tray of racks and devices with their macros exposed, so signature effects map to the surface and re-resolve when the set changes.</p></div>
+        <div class="feature"><h4>Learn &amp; bind</h4><p>Assign any device parameter to a slot by learning it live; fixed signature slots plus generic ones you shape yourself.</p></div>
+        <div class="feature"><h4>Transport &amp; tempo</h4><p>Tap tempo, play/stop, and a beat readout — the console stays locked to Live's clock.</p></div>
+      </div>
+
+      <h2>How it works</h2>
+      <p>Dub Console is an Electron desktop app. The renderer never speaks OSC directly — it exchanges clean JSON messages with the main process, which translates them to and from <strong>AbletonOSC</strong> over UDP. That separation means the same interface runs against real Live or against a built-in mock, so the surface can be developed and demoed without a running session. Track colours come across the wire already aged into usable tints, and the whole thing is designed to feel like hardware, not a settings panel.</p>
+
+      <h2>Why</h2>
+      <p>Ableton is a studio, not a dub desk. Dub Console adds the missing performance layer: an opinionated, gesture-first controller for the one style that treats the mixer as the instrument.</p>
+    </article>
+
+    <aside class="side">
+      <div class="side-card">
+        <h4>At a glance</h4>
+        <div class="kv"><span class="k">Type</span><span class="v">Desktop performance app</span></div>
+        <div class="kv"><span class="k">Status</span><span class="v"><span class="status-dot dot-build"></span>In development</span></div>
+        <div class="kv"><span class="k">Shell</span><span class="v">Electron</span></div>
+        <div class="kv"><span class="k">Transport</span><span class="v">OSC / UDP</span></div>
+        <div class="kv"><span class="k">Bridge</span><span class="v">AbletonOSC</span></div>
+        <div class="kv"><span class="k">Platform</span><span class="v">Windows portable</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Stack</h4>
+        <div class="stacklist">
+          <span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">Vite</span>
+          <span class="tag">esbuild</span><span class="tag">OSC</span><span class="tag">AbletonOSC</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="more">
+      <h4>More projects</h4>
+      <div class="more-grid">
+        <a class="more-item a-moon" href="waves.html"><span class="d"></span><span>Waves<small>Life-OS web app</small></span></a>
+        <a class="more-item a-amber" href="waves-ableton.html"><span class="d"></span><span>Waves for Ableton<small>Live extension</small></span></a>
+        <a class="more-item a-moss" href="storymap.html"><span class="d"></span><span>Story Map<small>Live extension</small></span></a>
+        <a class="more-item a-berry" href="serviceberry.html"><span class="d"></span><span>Serviceberry<small>Proof of authorship</small></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

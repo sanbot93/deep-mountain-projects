@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Story Map — Deep Mountain Sound</title>
+<meta name="description" content="Plan a set, album, collab or remix as a narrative — chapters, motifs, and an energy arc — inside Ableton Live." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26L11 9l6 10 3-5 10 12z' fill='%237fae74'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
+      </svg>
+      <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
+    </a>
+    <a class="back-link" href="index.html">← All projects</a>
+  </div>
+</header>
+
+<section class="hero project-hero" style="--accent: var(--moss); padding-bottom:170px;">
+  <div class="wrap">
+    <div class="glyph-lg" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 20V6l5-2 6 2 5-2v14l-5 2-6-2-5 2z"/><path d="M9 4v16M15 6v16"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Ableton Live extension</p>
+    <h1>Story Map</h1>
+    <p class="lede">Plan a set, album, collab, or remix as a narrative. Chapters with their own emotion and tempo, recurring motifs, and an energy arc that runs from the first note to the peak.</p>
+    <div class="meta-row">
+      <span class="pill"><span class="status-dot dot-early"></span>Early build</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Ableton Extensions SDK</span>
+      <span class="pill">Tested core</span>
+    </div>
+  </div>
+  <svg class="ridge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 250 L240 150 L440 220 L640 120 L820 210 L1040 110 L1240 200 L1440 140 L1440 320 L0 320 Z" fill="#232327" opacity="0.9"/>
+    <path d="M0 285 L200 210 L400 270 L620 190 L860 265 L1080 195 L1300 260 L1440 220 L1440 320 L0 320 Z" fill="#1c1c1f"/>
+    <path d="M0 315 L300 265 L560 300 L820 260 L1120 300 L1440 270 L1440 320 L0 320 Z" fill="#161618"/>
+  </svg>
+</section>
+
+<div class="content" style="--accent: var(--moss);">
+  <div class="wrap">
+    <article class="prose">
+      <h2>What it is</h2>
+      <p>Story Map is a planning surface for music with a shape. Instead of a flat arrangement, you lay out your project as a story: a vision and a guiding sentence at the top, a sequence of chapters below, recurring motifs that thread through them, and an energy arc that shows the journey from opening to peak. Every field is a starting point, never locked — chapters can be added, reordered, and rewritten as the music tells you what it wants.</p>
+
+      <h2>Five kinds of project</h2>
+      <p>It opens with templates tuned to how the work is really made — each just a scaffold you edit freely:</p>
+      <ul>
+        <li><strong>Set</strong> — a DJ/live journey: Opening, First depth, Rising, Peak, and beyond.</li>
+        <li><strong>Album</strong> — a collection with a through-line across tracks.</li>
+        <li><strong>Collab</strong> — chapters carry an <em>ayni</em> pair: who leads, what they bring, what they receive.</li>
+        <li><strong>Remix</strong> — a re-telling of someone else's story.</li>
+        <li><strong>Track</strong> — a single piece, mapped section by section.</li>
+      </ul>
+
+      <h2>What a chapter holds</h2>
+      <p>Each chapter is richer than a marker. It carries an emotion, a tempo and rhythmic feel, the role of the bass, the harmony, a nature element, influences, a visual palette, and how it transitions in — plus a status of planned, growing, or done. It's a place to think about <em>why</em> a section exists before reaching for a device.</p>
+      <div class="feature-grid">
+        <div class="feature"><h4>Motifs</h4><p>Named, symbol-marked threads with their own lane colour, so you can see a recurring idea move through the whole piece.</p></div>
+        <div class="feature"><h4>Energy arc</h4><p>A start and end BPM and an energy curve — the emotional topography of the set at a glance.</p></div>
+        <div class="feature"><h4>Sound library</h4><p>An additive section for seeds, ideas, rendered sounds, and outside references (a link, a WAV), each optionally homed to a chapter or motif.</p></div>
+        <div class="feature"><h4>Vocabulary</h4><p>A running glossary of the language and sources a project draws from — its private lexicon.</p></div>
+      </div>
+
+      <h2>How it's built</h2>
+      <p>The core is pure TypeScript — data model, templates, validation, layout, and a Markdown read-back — with no SDK and no I/O, which makes it fully unit-testable on its own. On top sits the Ableton Extensions SDK integration and a pluggable store: plans can live locally under the extension's storage, or sync through a Waves-backed store. The schema is versioned and forward-compatible, so plans written before a feature existed keep loading unchanged.</p>
+
+      <blockquote>Begin almost before sound.</blockquote>
+    </article>
+
+    <aside class="side">
+      <div class="side-card">
+        <h4>At a glance</h4>
+        <div class="kv"><span class="k">Type</span><span class="v">Ableton Live extension</span></div>
+        <div class="kv"><span class="k">Status</span><span class="v"><span class="status-dot dot-early"></span>Early build</span></div>
+        <div class="kv"><span class="k">Language</span><span class="v">TypeScript</span></div>
+        <div class="kv"><span class="k">Core</span><span class="v">Pure, unit-tested</span></div>
+        <div class="kv"><span class="k">Storage</span><span class="v">Local or Waves</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Stack</h4>
+        <div class="stacklist">
+          <span class="tag">TypeScript</span><span class="tag">Extensions SDK</span><span class="tag">Vitest</span>
+          <span class="tag">Markdown</span><span class="tag">Versioned schema</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="more">
+      <h4>More projects</h4>
+      <div class="more-grid">
+        <a class="more-item a-moon" href="waves.html"><span class="d"></span><span>Waves<small>Life-OS web app</small></span></a>
+        <a class="more-item a-amber" href="waves-ableton.html"><span class="d"></span><span>Waves for Ableton<small>Live extension</small></span></a>
+        <a class="more-item a-rust" href="dub-console.html"><span class="d"></span><span>Dub Console<small>Performance mixer</small></span></a>
+        <a class="more-item a-berry" href="serviceberry.html"><span class="d"></span><span>Serviceberry<small>Proof of authorship</small></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

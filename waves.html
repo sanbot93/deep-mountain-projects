@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waves — Deep Mountain Sound</title>
+<meta name="description" content="A sacred personal life-OS built around ritual and the Andean Chakana." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26L11 9l6 10 3-5 10 12z' fill='%238f9bd0'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
+      </svg>
+      <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
+    </a>
+    <a class="back-link" href="index.html">← All projects</a>
+  </div>
+</header>
+
+<section class="hero project-hero" style="--accent: var(--moon); padding-bottom:170px;">
+  <div class="wrap">
+    <div class="glyph-lg" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <path d="M2 9c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0"/><path d="M2 15c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Life-OS · Web app</p>
+    <h1>Waves</h1>
+    <p class="lede">A sacred personal life-OS. Waves centers your day around ritual and structures your life through the Chakana — the Andean cross, five domains held in balance.</p>
+    <div class="meta-row">
+      <span class="pill"><span class="status-dot dot-live"></span>Deploy-and-use build</span>
+      <span class="pill">Django 5 + DRF</span>
+      <span class="pill">React 18 + Vite</span>
+      <span class="pill">One SQLite file</span>
+    </div>
+  </div>
+  <svg class="ridge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 250 L240 150 L440 220 L640 120 L820 210 L1040 110 L1240 200 L1440 140 L1440 320 L0 320 Z" fill="#232327" opacity="0.9"/>
+    <path d="M0 285 L200 210 L400 270 L620 190 L860 265 L1080 195 L1300 260 L1440 220 L1440 320 L0 320 Z" fill="#1c1c1f"/>
+    <path d="M0 315 L300 265 L560 300 L820 260 L1120 300 L1440 270 L1440 320 L0 320 Z" fill="#161618"/>
+  </svg>
+</section>
+
+<div class="content" style="--accent: var(--moon);">
+  <div class="wrap">
+    <article class="prose">
+      <h2>What it is</h2>
+      <p>Waves turns a day into a ritual. You set a morning intent, move through a single stream of tasks and practices, run focused sessions, and reflect at dusk. Everything you do feeds two living things: a <strong>Plant</strong> that grows from doing, and a <strong>Character</strong> that grows from discipline and reflection. The canvas itself drifts with the time of day — a system called <strong>Pacha</strong> — amber at dawn toward indigo at night.</p>
+      <blockquote>Move with what matters.</blockquote>
+
+      <h2>The day, as a ritual</h2>
+      <ul>
+        <li><strong>Morning intent</strong> — open Waves; the canvas greets you in the light of the hour. Write the one thing that matters today.</li>
+        <li><strong>Plant the stream</strong> — add tasks, each tagged to a domain and given a type: task, habit, review, creation, or milestone.</li>
+        <li><strong>Move</strong> — check things off. Each completion waters the Plant or grows the Character, and fills its domain's ring on the Chakana.</li>
+        <li><strong>Focus</strong> — hit the focus ring on any task for a Pomodoro timer with a soft chime.</li>
+        <li><strong>Practices</strong> — daily and weekly habits keep streaks. Miss a day and the streak resets — gently.</li>
+        <li><strong>Evening reflection</strong> — at dusk, close the day. What grew? What waits?</li>
+      </ul>
+
+      <h2>The cosmology</h2>
+      <p>Life is held in five domains — the arms and center of the Chakana. Tap any node to filter the day down to a single domain.</p>
+      <div class="feature-grid">
+        <div class="feature"><h4>🌲 Foundation · south</h4><p>Body, home, money — the ground you stand on.</p></div>
+        <div class="feature"><h4>🎵 Creation · east</h4><p>Music, art, the work you make.</p></div>
+        <div class="feature"><h4>🤝 Community · west</h4><p>Relationships, the ayllu, who you move with.</p></div>
+        <div class="feature"><h4>🔭 Vision · north</h4><p>Direction, learning, who you're becoming.</p></div>
+        <div class="feature"><h4>🌀 Integration · center</h4><p>Reflection, rest, the whole that binds the four.</p></div>
+        <div class="feature"><h4>🌱 Two living things</h4><p>The Plant grows Muyu → Hatun Mallki; the Character rises Wawa → Apu. Crossing a threshold triggers a quiet full-screen rite.</p></div>
+      </div>
+
+      <h2>How it's built</h2>
+      <p>A Django 5 + DRF backend serves both the API and the compiled React app from a single origin, so there's one port and no CORS to think about. The frontend is hand-written React 18 + CSS with no build-time UI dependencies. All of your data lives in one SQLite file — easy to back up, easy to move.</p>
+      <p>It's a deploy-and-use build: with Docker it's a single <code>docker compose up</code>, seeding a ready account with the five domains and starter tasks on <code>localhost:8000</code>. Without Docker, <code>start.bat</code> / <code>start.sh</code> builds the frontend, sets up a virtualenv, migrates, seeds, and launches.</p>
+
+      <h2>Where it's going</h2>
+      <p>The cosmology is built solo-first. The natural next horizon is the <strong>Ayllu / Deep Mountain</strong> community layer — shared domains, and the label's releases, artists, and events as first-class vessels — informed by living in the solo build first.</p>
+    </article>
+
+    <aside class="side">
+      <div class="side-card">
+        <h4>At a glance</h4>
+        <div class="kv"><span class="k">Type</span><span class="v">Web app / life-OS</span></div>
+        <div class="kv"><span class="k">Status</span><span class="v"><span class="status-dot dot-live"></span>Usable build</span></div>
+        <div class="kv"><span class="k">Backend</span><span class="v">Django 5 · DRF</span></div>
+        <div class="kv"><span class="k">Frontend</span><span class="v">React 18 · Vite</span></div>
+        <div class="kv"><span class="k">Data</span><span class="v">Single SQLite file</span></div>
+        <div class="kv"><span class="k">Deploy</span><span class="v">Docker / one script</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Stack</h4>
+        <div class="stacklist">
+          <span class="tag">Django</span><span class="tag">DRF</span><span class="tag">React 18</span>
+          <span class="tag">Vite</span><span class="tag">SQLite</span><span class="tag">Docker</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="more">
+      <h4>More projects</h4>
+      <div class="more-grid">
+        <a class="more-item a-amber" href="waves-ableton.html"><span class="d"></span><span>Waves for Ableton<small>Live extension</small></span></a>
+        <a class="more-item a-moss" href="storymap.html"><span class="d"></span><span>Story Map<small>Live extension</small></span></a>
+        <a class="more-item a-rust" href="dub-console.html"><span class="d"></span><span>Dub Console<small>Performance mixer</small></span></a>
+        <a class="more-item a-berry" href="serviceberry.html"><span class="d"></span><span>Serviceberry<small>Proof of authorship</small></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

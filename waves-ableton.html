@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waves for Ableton — Deep Mountain Sound</title>
+<meta name="description" content="Capture ideas, tasks and seeds and snapshot Set versions from inside Ableton Live." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26L11 9l6 10 3-5 10 12z' fill='%23d8a24a'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
+      </svg>
+      <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
+    </a>
+    <a class="back-link" href="index.html">← All projects</a>
+  </div>
+</header>
+
+<section class="hero project-hero" style="--accent: var(--amber); padding-bottom:170px;">
+  <div class="wrap">
+    <div class="glyph-lg" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <rect x="3" y="4" width="3" height="16" rx="1"/><rect x="10.5" y="4" width="3" height="16" rx="1"/><rect x="18" y="4" width="3" height="16" rx="1"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Ableton Live extension</p>
+    <h1>Waves for Ableton</h1>
+    <p class="lede">The studio companion to the Waves app. Capture ideas, tasks, and reusable seeds without leaving Live — and snapshot the shape of your Set as it grows.</p>
+    <div class="meta-row">
+      <span class="pill"><span class="status-dot dot-build"></span>Beta SDK build</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Ableton Extensions SDK</span>
+      <span class="pill">Syncs to Waves</span>
+    </div>
+  </div>
+  <svg class="ridge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 250 L240 150 L440 220 L640 120 L820 210 L1040 110 L1240 200 L1440 140 L1440 320 L0 320 Z" fill="#232327" opacity="0.9"/>
+    <path d="M0 285 L200 210 L400 270 L620 190 L860 265 L1080 195 L1300 260 L1440 220 L1440 320 L0 320 Z" fill="#1c1c1f"/>
+    <path d="M0 315 L300 265 L560 300 L820 260 L1120 300 L1440 270 L1440 320 L0 320 Z" fill="#161618"/>
+  </svg>
+</section>
+
+<div class="content" style="--accent: var(--amber);">
+  <div class="wrap">
+    <article class="prose">
+      <h2>What it is</h2>
+      <p>An extension for Ableton Live that puts Waves one right-click away from any track. The moment you have an idea — <em>replace this kick, too boxy</em> — you catch it where the work is happening, tag it with tonight's mode, and keep playing. Nothing pulls you out of the session and into a browser.</p>
+
+      <h2>What it does</h2>
+      <div class="feature-grid">
+        <div class="feature"><h4>Add a task to a track</h4><p>Right-click any audio or MIDI track to attach a task, pre-filled with tonight's working mode pulled live from the Waves server.</p></div>
+        <div class="feature"><h4>Capture idea → Seed</h4><p>Send a raw idea straight to your Seed vault. When the track has audio, its file path rides along so the seed can be pulled into any future Set.</p></div>
+        <div class="feature"><h4>Import a seed</h4><p>Bring a saved seed's audio into the open project — Live does the copying through the official Resources API, sandbox-legal.</p></div>
+        <div class="feature"><h4>Snapshot versions</h4><p>Capture a metadata snapshot of the Set — tracks, tempo, scene count, and a diff against the last one. Full history rotates locally; each snapshot's metadata syncs to Waves.</p></div>
+        <div class="feature"><h4>Open the Waves window</h4><p>Launch the full dashboard inside Live, wired live to the API with an in-window sign-in and org chooser.</p></div>
+        <div class="feature"><h4>Offline-friendly</h4><p>If the backend is unreachable, snapshots still save locally and sync later; modes fall back gracefully.</p></div>
+      </div>
+
+      <h2>How it works</h2>
+      <p>The extension is written in TypeScript against the Ableton Extensions SDK. Its dialogs are small HTML webviews — the capture panel carries the Deep Mountain palette itself: charcoal panels, an amber accent for blockers, moon-blue for quick flags, moss-green for ideas. A host bridge talks back to the extension across macOS WebKit and Windows WebView2.</p>
+      <p>Because the SDK exposes no <code>.als</code> path or save API, a "version" is a metadata snapshot of the live object model — never file bytes. That keeps byte-level safety with Live's own backups while giving the web app a readable version timeline for every Set. A fingerprint hash dedupes unchanged sessions, and stable track anchors let per-track tasks survive renames and reorders.</p>
+
+      <h2>How it fits</h2>
+      <p>This is the bridge between the studio and the <a href="waves.html" style="color:var(--amber);">Waves</a> life-OS. Ideas caught here become tasks and seeds in the Creation domain; Set snapshots give each music project a version history the web app can show. The studio and the day stay in step.</p>
+    </article>
+
+    <aside class="side">
+      <div class="side-card">
+        <h4>At a glance</h4>
+        <div class="kv"><span class="k">Type</span><span class="v">Ableton Live extension</span></div>
+        <div class="kv"><span class="k">Status</span><span class="v"><span class="status-dot dot-build"></span>Beta SDK</span></div>
+        <div class="kv"><span class="k">Language</span><span class="v">TypeScript</span></div>
+        <div class="kv"><span class="k">Runtime</span><span class="v">WebKit / WebView2</span></div>
+        <div class="kv"><span class="k">Pairs with</span><span class="v">Waves web app</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Stack</h4>
+        <div class="stacklist">
+          <span class="tag">TypeScript</span><span class="tag">Extensions SDK</span><span class="tag">esbuild</span>
+          <span class="tag">HTML webviews</span><span class="tag">REST</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="more">
+      <h4>More projects</h4>
+      <div class="more-grid">
+        <a class="more-item a-moon" href="waves.html"><span class="d"></span><span>Waves<small>Life-OS web app</small></span></a>
+        <a class="more-item a-moss" href="storymap.html"><span class="d"></span><span>Story Map<small>Live extension</small></span></a>
+        <a class="more-item a-rust" href="dub-console.html"><span class="d"></span><span>Dub Console<small>Performance mixer</small></span></a>
+        <a class="more-item a-berry" href="serviceberry.html"><span class="d"></span><span>Serviceberry<small>Proof of authorship</small></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
