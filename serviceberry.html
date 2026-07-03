@@ -13,10 +13,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
-        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
-      </svg>
+      <img src="./DeepLogo.png" style="width: 100px;" />
       <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
     </a>
     <a class="back-link" href="index.html">← All projects</a>
@@ -32,7 +29,7 @@
     </div>
     <p class="eyebrow">Commons · Proof of authorship</p>
     <h1>Serviceberry</h1>
-    <p class="lede">A gift-economy network for creators. Upload a work, sign it, and receive a tamper-proof certificate of authorship — witnessed by a community-run chain of small, low-power nodes. No fees, no wallets, no extraction.</p>
+    <p class="lede">A gift-economy network for creators. Upload a work, sign it, and receive a tamper-proof certificate of authorship. All witnessed by a community-run chain of small, low-power nodes. No fees, no wallets, no extraction.</p>
     <div class="meta-row">
       <span class="pill"><span class="status-dot dot-build"></span>Processing engine in progress</span>
       <span class="pill">Python</span>
@@ -53,28 +50,28 @@
       <blockquote>“The serviceberry asks for nothing. It simply gives — and in giving, calls the whole forest into relationship.” <br/>— inspired by Robin Wall Kimmerer, <em>The Serviceberry</em></blockquote>
 
       <h2>The idea</h2>
-      <p>The serviceberry — the Saskatoon berry — doesn't sell its fruit. It offers it freely, and every creature that eats carries its seeds further than they could have gone alone. Serviceberry the project takes that as its model: <strong>generosity as infrastructure</strong>. Creators give their work to the world; the community gives its computing power to protect it; verifiers give their time to uphold the record. No one extracts, no one owns the network, everyone tends it.</p>
+      <p>The serviceberry, is known by many names; Saskatoon, siyaʔ (by the Syilx and Sinixt People), sq̓umu (by the Ktunaxa People), speqpeq7úw'i (by the Secwepemc People). Regardless of its name, this wonderful being doesn't sell its fruit. It offers it freely, and every creature that eats carries its seeds further than they could have gone alone. Serviceberry the project takes that as its model: <strong>generosity as infrastructure</strong>. Creators give their work to the world; the community gives its computing power to protect it; verifiers give their time to uphold the record. No one extracts, no one owns the network, everyone tends it.</p>
 
-      <h2>The north star</h2>
-      <p>Any creator — musician, weaver, jeweller, painter, potter — can upload a work, sign it, and receive a tamper-proof certificate of authorship that is verifiable in court and witnessed by a community-run network of nodes and LoRaWAN gateways, <strong>at no cost to them</strong>.</p>
+      <h2>The north star of this project</h2>
+      <p>Any creator, whether a musician, weaver, jeweller, painter, or a potter, can upload a work, sign it, and receive a tamper-proof certificate of authorship that is verifiable in court and witnessed by a community-run network of nodes and LoRaWAN gateways, <strong>at no cost to them</strong>.</p>
 
       <h2>How a work is registered</h2>
       <p>The processing engine turns any creative file into a signed, legally-defensible registration package:</p>
       <div class="feature-grid">
         <div class="feature"><h4>Perceptual + crypto hash</h4><p>A pHash/dHash for images, audio spectrograms and textile photos, alongside a SHA-256 of the raw file.</p></div>
-        <div class="feature"><h4>Invisible watermark</h4><p>A steganographic mark embedding creator ID, timestamp, and an AI opt-out flag — protection and a statement of values.</p></div>
+        <div class="feature"><h4>Invisible watermark</h4><p>A steganographic mark embedding creator ID, timestamp, and an AI opt-out flag. This serves as protection and a statement of values.</p></div>
         <div class="feature"><h4>C2PA manifest</h4><p>An industry-standard provenance manifest, signed with the creator's own keypair.</p></div>
-        <div class="feature"><h4>LoRaWAN witness</h4><p>An ~80-byte radio packet — a local, unforgeable timestamp broadcast to nearby community gateways.</p></div>
+        <div class="feature"><h4>LoRaWAN witness</h4><p>An ~80-byte radio packet. Local, unforgeable timestamp broadcast to nearby community gateways.</p></div>
       </div>
 
       <h2>The community chain</h2>
-      <p>Serviceberry runs its own <strong>Hyperledger Fabric</strong> network on community hardware — no proof-of-work, no mining, no corporate ledger. The clever part is that one Raspberry Pi plays three roles at once: a Fabric peer that syncs with the global network over the internet, an IPFS node that pins watermarked files, and a LoRaWAN packet forwarder that turns local radio timestamps into permanent on-chain records. The internet connection the gateway already needs is what makes the whole network global.</p>
+      <p>Serviceberry runs its own <strong>Hyperledger Fabric</strong> network on community hardware — no proof-of-work, no mining, no corporate ledger. One Raspberry Pi plays three roles at once: a Fabric peer that syncs with the global network over the internet, an IPFS node that pins watermarked files, and a LoRaWAN packet forwarder that turns local radio timestamps into permanent on-chain records. The internet connection the gateway already needs is what makes the whole network global.</p>
 
       <h2>For the creator</h2>
-      <p>All of that stays invisible. The experience is <em>upload, fill, sign</em> — email magic-link auth, a drag-and-drop with a metadata form, a human-readable certificate with a QR code, a dashboard of registered works, and a public page where anyone can paste a hash or drop a file to verify. No blockchain knowledge, no crypto wallet, no fee.</p>
+      <p>All of that stays invisible. The experience is <em>upload, fill, sign</em>. Then email magic-link authorization, a drag-and-drop with a metadata form, a human-readable certificate with a QR code, a dashboard of registered works, and a public page where anyone can paste a hash or drop a file to verify. No blockchain knowledge, no crypto wallet, no fee.</p>
 
       <h2>Where it stands</h2>
-      <p>It's an early-stage, part-time build with a clear roadmap: a pip-installable Python processing package and CLI first (<code>serviceberry register &lt;file&gt;</code>), then a Fabric testnet and Pi node image, then the web app, then real community nodes, and finally an alpha with local makers in Nelson, BC. Framed, deliberately, as a gift-economy project — not a crypto project.</p>
+      <p>It's an early-stage, part-time build with a clear roadmap: a pip-installable Python processing package and CLI first (<code>serviceberry register &lt;file&gt;</code>), then a Fabric testnet and Pi node image, then the web app, then real community nodes, and finally an alpha with local makers in Nelson, BC. Framed, deliberately, as a gift-economy project, DEFINETLY not a crypto project.</p>
 
       <p class="divider-note">“The serviceberry doesn't keep a ledger of what it gives. But we will — so that what creators give to the world can never be taken from them.”</p>
     </article>
@@ -114,7 +111,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span>Deep Mountain Sound · Deep in the Mountains of the Kootenays, British Columbia</span>
     <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
   </div>
 </footer>

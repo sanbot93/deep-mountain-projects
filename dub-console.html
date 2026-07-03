@@ -6,17 +6,13 @@
 <title>Dub Console — Deep Mountain Sound</title>
 <meta name="description" content="A dub-inspired performance mixer for Ableton Live, driven live over OSC." />
 <link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26L11 9l6 10 3-5 10 12z' fill='%23cf7a4d'/%3E%3C/svg%3E" />
 </head>
 <body>
 
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <svg class="mk" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M2 27L12 8l6 11 3-5 9 13z" fill="none" stroke="#d8a24a" stroke-width="1.6" stroke-linejoin="round"/>
-        <circle cx="24.5" cy="7.5" r="2.6" fill="#8f9bd0"/>
-      </svg>
+      <img src="./DeepLogo.png" style="width: 100px;" />
       <span>Deep Mountain Sound<small>workshop &amp; field notes</small></span>
     </a>
     <a class="back-link" href="index.html">← All projects</a>
@@ -32,7 +28,7 @@
     </div>
     <p class="eyebrow">Desktop · Performance mixer</p>
     <h1>Dub Console</h1>
-    <p class="lede">A dub-inspired performance surface for Ableton Live, driven live over OSC. The tactile dub board Live never shipped with — echo throws, spring reverb, and feedback you can ride by hand.</p>
+    <p class="lede">A dub-inspired performance surface for Ableton Live, driven live over OSC. The tactile dub board Live never shipped with; echo throws, spring reverb, and feedback you can ride by hand.</p>
     <div class="meta-row">
       <span class="pill"><span class="status-dot dot-build"></span>In development</span>
       <span class="pill">Electron</span>
@@ -51,7 +47,7 @@
   <div class="wrap">
     <article class="prose">
       <h2>What it is</h2>
-      <p>Dub was born on the mixing desk — engineers playing the board itself, throwing sounds into echo, drowning them in spring reverb, killing the feedback before it swallows the room. Dub Console brings that instrument to Ableton Live: a standalone performance surface that talks to Live over the network and lets you play the mix in real time, with your hands, the way a dub engineer would.</p>
+      <p>Dub was born on the mixing desk, with engineers playing the mixing board like an instrument, throwing sounds into echo, drowning them in spring reverb, killing the feedback before it swallows the room. Dub Console brings that instrument to Ableton Live: a standalone performance surface that talks to Live over the network and lets you play the mix in real time, with your hands, the way a dub engineer would.</p>
 
       <h2>What it does</h2>
       <div class="feature-grid">
@@ -64,7 +60,7 @@
       </div>
 
       <h2>How it works</h2>
-      <p>Dub Console is an Electron desktop app. The renderer never speaks OSC directly — it exchanges clean JSON messages with the main process, which translates them to and from <strong>AbletonOSC</strong> over UDP. That separation means the same interface runs against real Live or against a built-in mock, so the surface can be developed and demoed without a running session. Track colours come across the wire already aged into usable tints, and the whole thing is designed to feel like hardware, not a settings panel.</p>
+      <p>Dub Console is an Electron desktop app. The renderer never speaks OSC directly. This means that the renderer exchanges clean JSON messages with the main process, which translates them to and from <strong>AbletonOSC</strong> over UDP. That separation means the same interface runs against real Live or against a built-in mock, so the surface can be developed and demoed without a running session. Track colours come across the wire already aged into usable tints, and the whole thing is designed to feel like hardware, not a settings panel.</p>
 
       <h2>Why</h2>
       <p>Ableton is a studio, not a dub desk. Dub Console adds the missing performance layer: an opinionated, gesture-first controller for the one style that treats the mixer as the instrument.</p>
@@ -105,7 +101,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>Deep Mountain Sound · Nelson, British Columbia</span>
+    <span>Deep Mountain Sound · Deep in the Mountains of the Kootenays, British Columbia</span>
     <span><a href="index.html" style="color:var(--muted);">← Back to all projects</a></span>
   </div>
 </footer>
